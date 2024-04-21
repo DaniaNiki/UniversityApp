@@ -7,14 +7,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Create\**" />
     <Compile Remove="Views\Home\Новая папка\**" />
+    <Compile Remove="Views\Новая папка1\**" />
+    <Compile Remove="Views\Новая папка2\**" />
     <Compile Remove="Views\Новая папка\**" />
+    <Content Remove="Views\Create\**" />
     <Content Remove="Views\Home\Новая папка\**" />
+    <Content Remove="Views\Новая папка1\**" />
+    <Content Remove="Views\Новая папка2\**" />
     <Content Remove="Views\Новая папка\**" />
+    <EmbeddedResource Remove="Views\Create\**" />
     <EmbeddedResource Remove="Views\Home\Новая папка\**" />
+    <EmbeddedResource Remove="Views\Новая папка1\**" />
+    <EmbeddedResource Remove="Views\Новая папка2\**" />
     <EmbeddedResource Remove="Views\Новая папка\**" />
+    <None Remove="Views\Create\**" />
     <None Remove="Views\Home\Новая папка\**" />
+    <None Remove="Views\Новая папка1\**" />
+    <None Remove="Views\Новая папка2\**" />
     <None Remove="Views\Новая папка\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\University\Index1.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\University\Index1.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

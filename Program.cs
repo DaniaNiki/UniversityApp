@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+//подключение БД
 builder.Services.AddDbContext<UniversityContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("UniversityContext")));
 
@@ -19,6 +20,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+//инициализация бд и запуск сервиса с заполнением данных, если БД пустая
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -31,6 +33,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// Настройка маршрута по умолчанию через app.Map()
+app.Map("/", () => Results.Redirect("/studs/Index"));
 
 app.MapControllerRoute(
     name: "default",
